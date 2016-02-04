@@ -1,0 +1,278 @@
+/* app css stylesheet */
+/* general style and header/footer */
+body {
+  font-size: 20px; }
+
+.btn-default {
+  background-color: #fff;
+  color: #88D498;
+  border-color: #88D498;
+  transition: 0.3s; }
+  .btn-default:focus, .btn-default:active, .btn-default:hover {
+    background-color: #88D498;
+    color: #fff;
+    border-color: #fff; }
+  .btn-default[disabled] {
+    border-color: #fff; }
+
+.btn-success {
+  background-color: #FFA69E;
+  color: #fff;
+  border-color: #FFA69E;
+  transition: 0.3s; }
+  .btn-success:focus, .btn-success:active, .btn-success:hover {
+    background-color: #FF686B;
+    color: #fff;
+    border-color: #FF686B; }
+
+header {
+  font-size: 0.7em; }
+  header nav.navbar {
+    border-radius: 0;
+    background-color: #1A936F;
+    border-color: #1A936F; }
+    header nav.navbar .navbar-brand {
+      font-size: 1.4em; }
+    header nav.navbar .navbar-brand, header nav.navbar .nav-registration a {
+      color: #fff;
+      transition: 0.3s; }
+      header nav.navbar .navbar-brand:hover, header nav.navbar .nav-registration a:hover {
+        color: #114B5F; }
+    header nav.navbar .type-show-select {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px; }
+  header .navbar-inverse .navbar-collapse {
+    border-color: #fff; }
+    header .navbar-inverse .navbar-collapse .navbar-form {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      border: none; }
+      header .navbar-inverse .navbar-collapse .navbar-form > .btn-group {
+        margin-right: 15px; }
+        header .navbar-inverse .navbar-collapse .navbar-form > .btn-group input {
+          box-shadow: none;
+          border: none;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0; }
+        header .navbar-inverse .navbar-collapse .navbar-form > .btn-group .btn {
+          border-color: white;
+          border-left-color: inherit;
+          color: #1A936F; }
+          header .navbar-inverse .navbar-collapse .navbar-form > .btn-group .btn:hover {
+            color: #fff;
+            background-color: #1A936F; }
+      header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav li:first-child a {
+        padding-top: 9px;
+        padding-bottom: 9px; }
+      header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav li a {
+        color: #fff; }
+        header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav li a .circle-border {
+          padding: 6px;
+          border: 1px solid #fff;
+          border-radius: 20px; }
+        header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav li a:hover {
+          color: #114B5F; }
+          header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav li a:hover .circle-border {
+            border-color: #114B5F; }
+  header .navbar-inverse .navbar-toggle {
+    border-color: #fff; }
+    header .navbar-inverse .navbar-toggle:focus, header .navbar-inverse .navbar-toggle:hover {
+      background-color: #fff; }
+      header .navbar-inverse .navbar-toggle:focus .icon-bar, header .navbar-inverse .navbar-toggle:hover .icon-bar {
+        background-color: #1A936F; }
+
+main {
+  margin: 5% 0 20px; }
+  main .alert {
+    position: absolute;
+    margin: 0 auto;
+    top: 20px;
+    min-width: 250px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    max-width: 40%; }
+  main .wrapper-form {
+    background-color: #88D498;
+    border-radius: 5px;
+    padding: 10px 25px; }
+    main .wrapper-form h3 {
+      color: #fff;
+      margin: 20px 0;
+      text-align: center; }
+    main .wrapper-form input {
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+      padding: 10px;
+      color: #88D498;
+      border: none;
+      border-radius: 5px; }
+      main .wrapper-form input:focus {
+        outline: none; }
+    main .wrapper-form button {
+      display: block;
+      margin: 0 auto;
+      width: 100%; }
+    main .wrapper-form .error-text h3 {
+      color: #114B5F; }
+
+footer {
+  display: none; }
+
+@media screen and (max-width: 991px) {
+  body {
+    font-size: 16px; }
+    body header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav > li:first-child {
+      height: 50px; }
+      body header .navbar-inverse .navbar-collapse .navbar-form .user-info-less .navbar-nav > li:first-child a {
+        height: 50px;
+        padding-top: 10.5px; } }
+@media screen and (max-width: 767px) {
+  header nav.navbar .form-group a.btn {
+    width: 100%;
+    margin-top: 10px; }
+  header nav.navbar .type-show-select {
+    background: #fff;
+    color: #000;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px; }
+  header .navbar-inverse .navbar-collapse .navbar-form {
+    padding-bottom: 0; }
+    header .navbar-inverse .navbar-collapse .navbar-form > .btn-group {
+      width: 100%; }
+      header .navbar-inverse .navbar-collapse .navbar-form > .btn-group .btn-group:first-child {
+        width: 80%; }
+      header .navbar-inverse .navbar-collapse .navbar-form > .btn-group .btn-group:last-child {
+        width: 20%; }
+        header .navbar-inverse .navbar-collapse .navbar-form > .btn-group .btn-group:last-child a {
+          margin-top: 0; }
+    header .navbar-inverse .navbar-collapse .navbar-form .user-info-less {
+      margin: 0; } }
+.grid {
+  border: 1px solid #88D498;
+  border-radius: 5px;
+  padding: 10px 15px;
+  position: relative; }
+  .grid div[class^='col-'] {
+    font-size: 20px; }
+  .grid .col-10 {
+    display: inline-block;
+    width: 10%;
+    text-align: center; }
+    .grid .col-10 a.delete-btn {
+      vertical-align: super;
+      z-index: 1000;
+      position: relative; }
+  .grid .col-15 {
+    display: inline-block;
+    width: 15%; }
+  .grid .col-60 {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 60%; }
+  .grid .hourLine {
+    border: 1px solid #88D498;
+    padding: 5px;
+    background-color: #88D498;
+    margin: 0;
+    border-radius: 5px; }
+    .grid .hourLine li {
+      color: #fff;
+      list-style: none;
+      display: inline-block;
+      width: calc(100% / 24);
+      font-size: 0.8em;
+      text-align: center; }
+      .grid .hourLine li.now {
+        color: #114B5F; }
+  .grid .item {
+    margin: 10px 0;
+    font-size: 0; }
+    .grid .item h4, .grid .item p {
+      font-size: 0.8em;
+      margin: 0;
+      color: #114B5F; }
+  .grid .wrapper-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    padding: 10px 15px; }
+    .grid .wrapper-zone .col-60 {
+      height: 100%;
+      margin-left: 30%; }
+    .grid .wrapper-zone ul {
+      margin: 0;
+      padding: 15px 5px 5px;
+      height: 100%; }
+      .grid .wrapper-zone ul li {
+        height: 100%;
+        color: #fff;
+        list-style: none;
+        display: inline-block;
+        width: calc(100% / 24);
+        font-size: 16px;
+        text-align: center;
+        margin-top: -5px; }
+        .grid .wrapper-zone ul li.active {
+          border: 1px solid #114B5F;
+          border-radius: 5px; }
+
+@media screen and (max-width: 991px) {
+  .grid div[class^='col-'] {
+    font-size: 16px; } }
+@media screen and (max-width: 767px) {
+  .grid .col-15 {
+    width: 45%; }
+  .grid .col-60, .grid .wrapper-zone {
+    display: none; }
+  .grid .col-10 a.delete-btn {
+    vertical-align: text-bottom; } }
+.wrapper-profile {
+  margin: 0 auto;
+  width: 50%;
+  background-color: #88D498;
+  border-radius: 5px;
+  padding: 10px 25px; }
+  .wrapper-profile h1 {
+    text-align: center;
+    color: #fff; }
+  .wrapper-profile form .input-group {
+    margin: 0 0 10px; }
+
+#DeleteProfileModal .modal-body h3 {
+  text-align: center;
+  color: #1A936F; }
+
+@media screen and (max-width: 991px) {
+  .wrapper-profile {
+    width: 80%; } }
+@media screen and (max-width: 767px) {
+  .wrapper-profile {
+    width: 100%; }
+    .wrapper-profile h1 {
+      font-size: 1.5em; }
+    .wrapper-profile form .input-group span, .wrapper-profile form .input-group input {
+      font-size: 0.7em; }
+    .wrapper-profile form .btn-delete {
+      float: right; } }
+.wrapper-error {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #88D498;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-align: center;
+  color: #fff; }
+  .wrapper-error h1 {
+    margin-bottom: 0; }
+  .wrapper-error h5 {
+    margin-top: 0; }
+  .wrapper-error p {
+    margin-top: 20px; }

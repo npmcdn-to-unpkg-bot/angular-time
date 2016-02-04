@@ -1,0 +1,85 @@
+.grid
+  border: 1px solid $main-light-color
+  border-radius: 5px
+  padding: 10px 15px
+  position: relative
+  div[class^='col-']
+    font-size: $font-size-md
+  .col-10
+    display: inline-block
+    width: 10%
+    text-align: center
+    a.delete-btn
+      vertical-align: super
+      z-index: 1000
+      position: relative
+  .col-15
+    display: inline-block
+    width: 15%
+  .col-60
+    display: inline-block
+    vertical-align: bottom
+    width: 60%
+  .hourLine
+    border: 1px solid $main-light-color
+    padding: 5px
+    background-color: $main-light-color
+    margin: 0
+    border-radius: 5px
+    li
+      color: $white
+      list-style: none
+      display: inline-block
+      width: calc(100% / 24)
+      font-size: 0.8em
+      text-align: center
+      &.now
+        color: $dark-active-color     
+  .item 
+    margin: 10px 0
+    font-size: 0
+    h4, p
+      font-size: 0.8em
+      margin: 0
+      color: $dark-active-color
+  .wrapper-zone
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    margin: 0px
+    height: 100%
+    padding: 10px 15px
+    .col-60
+      height: 100%
+      margin-left: 30%
+    ul
+      margin: 0
+      padding: 15px 5px 5px
+      height: 100%
+      li
+        height: 100%
+        color: $white
+        list-style: none
+        display: inline-block
+        width: calc(100% / 24)
+        font-size: 16px
+        text-align: center
+        margin-top: -5px 
+        &.active
+          border: 1px solid $dark-active-color
+          border-radius: 5px 
+
+@media screen and (max-width: 991px) 
+  .grid div[class^='col-'] 
+    font-size: $font-size-sm
+
+@media screen and (max-width: 767px)    
+  .grid
+    .col-15
+      width: 45%
+    .col-60, .wrapper-zone
+      display: none
+    .col-10 
+      a.delete-btn 
+        vertical-align: text-bottom

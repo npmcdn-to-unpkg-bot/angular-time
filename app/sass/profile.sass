@@ -1,0 +1,35 @@
+.wrapper-profile
+	margin: 0 auto
+	width: 50%
+	background-color: $main-light-color
+	border-radius: 5px
+	padding: 10px 25px
+	h1
+		text-align: center
+		color: $active-color
+	form
+		.input-group
+			margin: 0 0 10px
+
+#DeleteProfileModal
+	.modal-body
+		h3
+			text-align: center
+			color: $main-color
+
+@media screen and (max-width: 991px) 
+	.wrapper-profile
+		width: 80%				
+
+@media screen and (max-width: 767px)
+	.wrapper-profile
+		width: 100%
+		h1
+			font-size: 1.5em
+		form
+			.input-group
+				span, input
+					font-size: 0.7em
+			.btn-delete
+				float: right
+

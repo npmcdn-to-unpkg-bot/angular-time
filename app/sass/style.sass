@@ -1,0 +1,180 @@
+/* app css stylesheet */
+
+/* general style and header/footer*/
+
+$font-size-md: 20px
+$font-size-sm: 16px
+
+body
+  font-size: $font-size-md
+
+.btn-default
+  background-color: $bg-color
+  color: $main-light-color
+  border-color: $main-light-color
+  transition: 0.3s
+  &:focus, &:active, &:hover
+    background-color: $main-light-color
+    color: $white
+    border-color: $white
+  &[disabled]
+    border-color: $white
+
+.btn-success
+  background-color: #FFA69E
+  color: $white
+  border-color: #FFA69E
+  transition: 0.3s
+  &:focus, &:active, &:hover
+    background-color: #FF686B
+    color: $white
+    border-color: #FF686B
+
+header 
+  font-size: 0.7em
+  nav.navbar
+    border-radius: 0
+    background-color: $header-bg-color
+    border-color: $header-bg-color
+    .navbar-brand
+      font-size: 1.4em
+    .navbar-brand, .nav-registration a
+      color: $white
+      transition: 0.3s
+      &:hover
+        color: $dark-active-color
+    .type-show-select
+      background: transparent
+      border: none
+      color: $white
+      font-size: 16px  
+  .navbar-inverse 
+    .navbar-collapse
+      border-color: $white
+      .navbar-form
+        margin-top: 0px
+        margin-bottom: 0px
+        border: none
+        >.btn-group
+          margin-right: 15px
+          input
+            box-shadow: none
+            border: none
+            border-bottom-right-radius: 0
+            border-top-right-radius: 0
+          .btn
+            border-color: white
+            border-left-color: inherit
+            color: $header-bg-color
+            &:hover
+              color: $active-color
+              background-color: $header-bg-color
+        .user-info-less
+          .navbar-nav
+            li
+              &:first-child
+                a
+                  padding-top: 9px
+                  padding-bottom: 9px
+              a
+                color: $active-color
+                .circle-border
+                  padding: 6px
+                  border: 1px solid $active-color
+                  border-radius: 20px
+                &:hover
+                  color: $dark-active-color
+                  .circle-border
+                    border-color: $dark-active-color
+
+    .navbar-toggle
+      border-color: $white
+      &:focus, &:hover
+        background-color: $bg-color
+        .icon-bar
+          background-color: $header-bg-color     
+
+main
+  margin: 5% 0 20px
+  .alert
+    position: absolute
+    margin: 0 auto
+    top: 20px
+    min-width: 250px
+    text-align: center
+    left: 0
+    right: 0
+    max-width: 40%
+  .wrapper-form
+    background-color: $main-light-color
+    border-radius: 5px
+    padding: 10px 25px
+    h3
+      color: $white
+      margin: 20px 0
+      text-align: center
+    input
+      display: block
+      width: 100%
+      margin: 10px auto
+      padding: 10px
+      color: $main-light-color
+      border: none
+      border-radius: 5px
+      &:focus
+        outline: none
+    button
+      display: block
+      margin: 0 auto
+      width: 100%
+    .error-text
+      h3
+        color: $dark-active-color
+
+footer
+  display: none
+
+@media screen and (max-width: 991px) 
+  body
+    font-size: $font-size-sm
+    header
+      .navbar-inverse
+        .navbar-collapse
+          .navbar-form
+            .user-info-less
+              .navbar-nav>li:first-child
+                height: 50px
+                a
+                  height: 50px
+                  padding-top: 10.5px
+
+@media screen and (max-width: 767px) 
+  header 
+    nav.navbar 
+      .form-group 
+        a.btn
+          width: 100%
+          margin-top: 10px
+      .type-show-select
+        background: $bg-color
+        color: $black
+        width: 100%
+        height: 30px
+        margin-bottom: 5px
+    .navbar-inverse
+      .navbar-collapse
+        .navbar-form
+          padding-bottom: 0
+          >.btn-group
+            width: 100%
+            .btn-group
+              &:first-child
+                width: 80%
+              &:last-child
+                width: 20%
+                a
+                  margin-top: 0
+          .user-info-less
+            margin: 0
+
+

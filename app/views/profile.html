@@ -1,0 +1,48 @@
+<div class="wrapper-profile" ng-controller="ProfileCtrl">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Account info</h1>
+		</div>
+		<div class="col-md-12">
+			<form action="">
+				<div class="input-group">
+					<span class="input-group-addon" id="profile-input-login">Login:</span>
+					<input id="profile-input-login" class="form-control" type="text" ng-model="user.login" ng-disabled="eventProfile == 'Edit'">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="profile-input-email">Email:</span>
+					<input id="profile-input-login" class="form-control" type="email" ng-model="user.email" ng-disabled="eventProfile == 'Edit'">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="profile-input-new-password">Current password:</span>
+					<input id="profile-input-new-password" class="form-control" type="password" ng-model="user.password" ng-disabled="eventProfile == 'Edit'">
+				</div>
+<!-- 				<div class="input-group">
+					<span class="input-group-addon" id="profile-input-password">New password:</span>
+					<input id="profile-input-password" class="form-control" type="password" ng-model="user.newPassword" ng-disabled="eventProfile == 'Edit'">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="profile-input-new-password">Confirm new password:</span>
+					<input id="profile-input-new-password" class="form-control" type="password" ng-model="user.newPasswordConf" ng-disabled="eventProfile == 'Edit'">
+				</div> -->
+				<button class="btn btn-default btn-edit" ng-click="editFunc(user)">{{eventProfile}} profile</button>
+				<button class="btn btn-default btn-delete" data-toggle="modal" data-target="#DeleteProfileModal">Delete profile</button>
+				<!-- Modal -->
+				<div class="modal fade" id="DeleteProfileModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+				  <div class="modal-dialog modal-sm" role="document">
+				    <div class="modal-content">
+				      <div class="modal-body">
+			        		<h3>Are you want delete your account?</h3>
+				      </div>
+				      <div class="modal-footer">
+			      		<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="deleteAccountFunc()">Yes</button>
+				        	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>

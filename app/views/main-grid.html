@@ -1,0 +1,29 @@
+<div class="grid" ng-controller="GridCtrl">
+	<div class="timelines" ng-controller="TimeCtrl">
+		<div class="row item" ng-repeat="city in cityList">
+			<div class="col-15">
+				<h4>{{ city.name }}</h4>
+			</div>
+			<div class="col-15">
+				<h4>{{ funcTime(city) }}</h4>
+				<p>{{ date }}</p>
+			</div>
+			<div class="col-60">
+				<ul class="hourLine">
+					<li ng-repeat="hour in dayHours" ng-class='varNow'>{{getHour(hour, city)}}</li>
+				</ul>
+			</div>
+			<div class="col-10">
+				<a class="btn btn-default delete-btn" ng-click="remove(city)">X</a>
+			</div>		
+		</div>
+	</div>
+	<div class="row item wrapper-zone" ng-controller='TimeCtrl'>
+		<div class="col-60">
+			<ul>
+			<!-- ng-class="{active: hour == scope.currentHour}" ng-click="setSelectedHour(hour)" -->
+				<li ng-repeat="hour in dayHours" ng-class="{'active': hour == selectedHour }" ng-mouseover="setSelectedHour(hour)" ng-mouseleave="setSelectedHour(currentHour)">{{setNowArea(hour)}}</li>
+			</ul>
+		</div>
+	</div>	
+</div>
