@@ -2,16 +2,6 @@
 
 timeApp.controller('EditGridCtrl', ['$scope', '$cookies', 'loginService', 'toastr', '$location',
 	function EditGridCtrl($scope, $cookies, loginService, toastr, $location) {
-    $scope.errorHide = function(){
-      if($location.path() == '/404')
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
-    }
   
 		$scope.selects = ['Time', 'Interval'];
 		$scope.selection = $scope.selects[0]; 
@@ -42,11 +32,44 @@ timeApp.controller('EditGridCtrl', ['$scope', '$cookies', 'loginService', 'toast
 		};
 
     $scope.checkAuthShow = function(){
-      if($cookies.get('token') != undefined){
+      if($location.path() == '/404')
+      {
+        return true;
+      }
+      else
+      {
+        if($cookies.get('token') != undefined){
+          return false;
+        }
+        else
+          return true;
+      }
+    };
+
+    $scope.checkAuthHide = function(){
+      if($location.path() == '/404')
+      {
         return false;
       }
       else
+      {
+        if($cookies.get('token') != undefined){
+          return false;
+        }
+        else
+          return true;
+      }
+    };
+
+    $scope.errorHide = function(){
+      if($location.path() == '/404')
+      {
         return true;
+      }
+      else
+      {
+        return false;
+      }
     };
 	}]);
 
@@ -183,7 +206,6 @@ timeApp.controller('ProfileCtrl', ['$scope', '$stateParams', '$cookies', 'loginS
     }
 
     $scope.deleteAccountFunc = function(){
-      console.log($cookies.get('userId'));
       loginService.deleteUser($cookies.get('userId'));
     }
 
