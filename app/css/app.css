@@ -152,13 +152,31 @@ footer {
           margin-top: 0; }
     header .navbar-inverse .navbar-collapse .navbar-form .user-info-less {
       margin: 0; } }
+.grid-header {
+  background-color: #88D498;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+  .grid-header .col-sm-4 {
+    white-space: nowrap; }
+  .grid-header .radio {
+    display: inline-block;
+    width: 50%;
+    letter-spacing: normal;
+    color: #fff;
+    text-align: center; }
+    .grid-header .radio input {
+      float: none;
+      margin: 0 5px 0; }
+
 .grid {
   border: 1px solid #88D498;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding: 10px 15px;
   position: relative; }
   .grid div[class^='col-'] {
-    font-size: 20px; }
+    font-size: 20px;
+    vertical-align: middle; }
   .grid .col-10 {
     display: inline-block;
     width: 10%;
@@ -184,11 +202,18 @@ footer {
       color: #fff;
       list-style: none;
       display: inline-block;
-      width: calc(100% / 24);
       font-size: 0.8em;
       text-align: center; }
+      .grid .hourLine li p {
+        color: #fff; }
       .grid .hourLine li.now {
         color: #114B5F; }
+        .grid .hourLine li.now p {
+          color: #114B5F; }
+    .grid .hourLine.hours-24 li {
+      width: calc(100% / 24); }
+    .grid .hourLine.hours-12 li {
+      width: calc(100% / 24); }
   .grid .item {
     margin: 10px 0;
     font-size: 0; }

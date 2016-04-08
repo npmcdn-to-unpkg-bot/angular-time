@@ -1,10 +1,27 @@
+.grid-header
+  background-color: $main-light-color
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  .col-sm-4
+    white-space: nowrap
+  .radio
+    display: inline-block
+    width: 50%
+    letter-spacing: normal
+    color: #fff
+    text-align: center
+    input
+      float: none
+      margin: 0 5px 0
 .grid
   border: 1px solid $main-light-color
-  border-radius: 5px
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
   padding: 10px 15px
   position: relative
   div[class^='col-']
     font-size: $font-size-md
+    vertical-align: middle
   .col-10
     display: inline-block
     width: 10%
@@ -30,11 +47,20 @@
       color: $white
       list-style: none
       display: inline-block
-      width: calc(100% / 24)
       font-size: 0.8em
       text-align: center
+      p
+        color: #fff
       &.now
-        color: $dark-active-color     
+        color: $dark-active-color  
+        p
+          color: $dark-active-color  
+    &.hours-24
+      li
+        width: calc(100% / 24)
+    &.hours-12
+      li
+        width: calc(100% / 24)
   .item 
     margin: 10px 0
     font-size: 0

@@ -1,29 +1,50 @@
-<div class="grid" ng-controller="GridCtrl">
-	<div class="timelines" ng-controller="TimeCtrl">
-		<div class="row item" ng-repeat="city in cityList">
-			<div class="col-15">
-				<h4>{{ city.name }}</h4>
+<div class="grid-wrapper" ng-controller="GridCtrl">
+	<div class="grid-header" ng-init="formatTime=1">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<div class="radio">
+				  <label>
+				    <input type="radio" ng-model="formatTime" id="formatTimeRadio1" value="1">
+				    24 hrs
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" ng-model="formatTime" id="formatTimeRadio2" value="2">
+				    am/pm
+				  </label>
+				</div>
 			</div>
-			<div class="col-15">
-				<h4>{{ funcTime(city) }}</h4>
-				<p>{{ date }}</p>
-			</div>
-			<div class="col-60">
-				<ul class="hourLine">
-					<li ng-repeat="hour in dayHours" ng-class='varNow'>{{getHour(hour, city)}}</li>
-				</ul>
-			</div>
-			<div class="col-10">
-				<a class="btn btn-default delete-btn" ng-click="remove(city)">X</a>
-			</div>		
 		</div>
 	</div>
-	<div class="row item wrapper-zone" ng-controller='TimeCtrl'>
-		<div class="col-60">
-			<ul>
-			<!-- ng-class="{active: hour == scope.currentHour}" ng-click="setSelectedHour(hour)" -->
-				<li ng-repeat="hour in dayHours" ng-class="{'active': hour == selectedHour }" ng-mouseover="setSelectedHour(hour)" ng-mouseleave="setSelectedHour(currentHour)">{{setNowArea(hour)}}</li>
-			</ul>
+	<div class="grid">
+		<div class="timelines" ng-controller="TimeCtrl">
+			<div class="row item" ng-repeat="city in cityList">
+				<div class="col-15">
+					<h4>{{ city.name }}</h4>
+				</div>
+				<div class="col-15">
+					<h4>{{ funcTime(city) }}</h4>
+					<p>{{ date }}</p>
+				</div>
+				<div class="col-60">
+					<ul class="hourLine" ng-class="isFormatTime()">
+						<li ng-repeat="hour in dayHours" ng-class='isNow(hour)'><cell data-value="{{getHour(hour, city)}}"></li>
+					</ul>
+				</div>
+				<div class="col-10">
+					<a class="btn btn-default delete-btn" ng-click="remove(city)">X</a>
+				</div>		
+			</div>
 		</div>
-	</div>	
+		<div class="row item wrapper-zone" ng-controller='TimeCtrl'>
+			<div class="col-60">
+				<ul>
+				<!-- ng-class="{active: hour == scope.currentHour}" ng-click="setSelectedHour(hour)" -->
+					<li ng-repeat="hour in dayHours" ng-class="{'active': hour == selectedHour }" ng-mouseover="setSelectedHour(hour)" ng-mouseleave="setSelectedHour(currentHour)">{{setNowArea(hour)}}</li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	
 </div>
